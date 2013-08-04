@@ -51,8 +51,8 @@ DHTMLBall.prototype.removeBall = function () {
  * 
  * @param {Object} N
  */
-function DHTMLTest(N) {
-        DHTMLTest.baseConstructor.call(this, N);
+function DHTMLTest(N , top, left, right, bottom) {
+        DHTMLTest.baseConstructor.call(this, N, top, left, right, bottom);
 }
 extend(DHTMLTest, BallsTest);
 

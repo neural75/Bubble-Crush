@@ -139,7 +139,14 @@ Ball.prototype.doCollide = function(b) {
  * 
  * @param {Object} N
  */
-function BallsTest(N) {
+function BallsTest(N, top, left, right, bottom) {
+    if (top != undefined)
+	{
+		model.walls.top = top;
+		model.walls.left = left;
+		model.walls.right = right;
+		model.walls.bottom = bottom;
+	}	
 	this._N = N; // number of objects
 	this._ballsO = new Array();
 	this._isRunning = false;
@@ -196,8 +203,8 @@ BallsTest.prototype.start = function(N) {
 			_this._showFPS.call(_this, Math.round(fps));
 	}
 
-	this._int1 = setInterval(moveBalls, 0);
-	this._int2 = setInterval(showFps, 3000);
+	this._int1 = setInterval(moveBalls, 5);
+	this._int2 = setInterval(showFps, 1000);
 	return true;
 }
 BallsTest.prototype.stop = function(){
@@ -219,7 +226,7 @@ BallsTest.prototype.pause = function (){
 BallsTest.prototype.resume = function (){
 	if (this._isRunning) return false;	
 	this._int1 = setInterval(moveBalls, 5);
-	this._int2 = setInterval(showFps, 3000);
+	this._int2 = setInterval(showFps, 1000);
 	return true;	
 }
 
