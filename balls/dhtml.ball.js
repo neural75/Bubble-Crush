@@ -27,7 +27,7 @@ function DHTMLBall(id, x, y, vx, vy) {
 	host.appendChild(img);
 	
 	this._elem= img;
-	this._elem.style.position = "relative"; 
+	this._elem.style.position = "absolute"; 
 	this._elem.style.display = "block";
 	this.move();
 }
