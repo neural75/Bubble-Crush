@@ -1,7 +1,7 @@
 /**
  * @author alex
  *
- * Modified for WebOs Porting:
+ * Modified for WebOs Porting and phonegap:
  * @author trubini trubini@gmail.com
  */
 var model = {
@@ -196,7 +196,7 @@ BallsTest.prototype.start = function(N) {
 			_this._showFPS.call(_this, Math.round(fps));
 	}
 
-	this._int1 = setInterval(moveBalls, 5);
+	this._int1 = setInterval(moveBalls, 0);
 	this._int2 = setInterval(showFps, 3000);
 	return true;
 }

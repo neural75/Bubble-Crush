@@ -2,7 +2,7 @@
  * @author alex
  * @requires ball.js
  * 
- * Modified for WebOs Porting:
+ * Modified for WebOs Porting and Phonegap:
  * @author trubini trubini@gmail.com
  */
 
