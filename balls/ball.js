@@ -8,7 +8,7 @@ var model = {
 	"walls" : {"left":0, "top":0, "right": 320, "bottom": 400},
 	"elastity" : -0.2,
 	"ballRadius" : 26,
-	"maxSpeed" : 3.0
+	"maxSpeed" : 2.0
 };
 
 // helper
