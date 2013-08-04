@@ -1,7 +1,7 @@
 /* body {font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 80%; color: #333333; margin:0;}*/
 .host {
-	width: 320px;
-        height: 400px;
+	width: auto; // 320px;
+    height: auto; //400px;
 }
 /*h2 {color: black; border-bottom: thin #999999 solid; padding-bottom: 15px;}*/
 /* div {position: relative; overflow: hidden;} */
