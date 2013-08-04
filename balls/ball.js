@@ -8,7 +8,7 @@ var model = {
 	"walls" : {"left":0, "top":0, "right": 320, "bottom": 400},
 	"elastity" : -0.2,
 	"ballRadius" : 26,
-	"maxSpeed" : 2.0
+	"maxSpeed" : 6.0
 };
 
 // helper
@@ -203,7 +203,7 @@ BallsTest.prototype.start = function(N) {
 			_this._showFPS.call(_this, Math.round(fps));
 	}
 
-	this._int1 = setInterval(moveBalls, 5);
+	this._int1 = setInterval(moveBalls, 17);
 	this._int2 = setInterval(showFps, 1000);
 	return true;
 }
@@ -225,7 +225,7 @@ BallsTest.prototype.pause = function (){
 
 BallsTest.prototype.resume = function (){
 	if (this._isRunning) return false;	
-	this._int1 = setInterval(moveBalls, 5);
+	this._int1 = setInterval(moveBalls, 17);
 	this._int2 = setInterval(showFps, 1000);
 	return true;	
 }
