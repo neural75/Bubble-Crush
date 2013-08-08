@@ -1,4 +1,8 @@
 Bubble-Crush
 ============
 
-Crush the bubbles
+Crush the moving bubbles!!
+
+Project page is at:
+http://neural75.github.io/Bubble-Crush
+
