@@ -4,6 +4,8 @@ html, body{
   padding:0;
   width:100%;
   height:100%;
+  overflow-y:hidden;
+  overflow-x:hidden;  
 }
 .host {
 	width: 100%; 
@@ -38,50 +40,6 @@ html, body{
     margin-left:20px;
     margin-right:20px;
     margin-top:8px;
-}
-.scene-footer {
-	position:fixed;
-	bottom:0px;
-	left:0px;
-	right:0px;
-	-webkit-border-image: url(../images/fade-bottom-light-30px.png) 35 0 0 0 repeat repeat;
-	border-width:35px 0px 0px 0px;
-	-webkit-palm-mouse-target: ignore;
-}
-.scene-footer-wrapper{
-	margin-top:-10px;
-}
-.scene-footer-spacer{
-	padding-bottom:65px;	
-}
-.scene-fade-top {
-	position: fixed; 
-	top: 0; 
-	z-index: 100000;
-	height: 54px; 
-	width: 100%;
-	background: url(../images/scene-fade-top.png) top center repeat-x;
-	-webkit-palm-mouse-target: ignore;
-}
-.palm-dark .scene-fade-top {
-	background-image: url(../images/scene-fade-top-dark.png);
-}
-
-.scene-fade-bottom {
-	position: fixed; 
-	bottom: 0; 
-	z-index: 100000;
-	height: 54px; 
-	width: 100%;
-	background: url(../images/scene-fade-bottom.png) bottom center repeat-x;
-	-webkit-palm-mouse-target: ignore;
-}
-.palm-dark .scene-fade-bottom {
-	background-image: url(../images/scene-fade-bottom-dark.png);
-}
-
-.palm-page-header .icon.prefs {
-	background-image: url(../images/prefs-icon.png);
 }
 
 .start-button {
