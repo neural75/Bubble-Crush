@@ -186,6 +186,12 @@ BallsTest.prototype.start = function(N) {
 				_this._ballsO[i].doCollide(_this._ballsO[j]);
 			}
 		}
+		
+		if (_this._Animate != undefined)
+		{
+		    //requestAnimFrame( _this._pixiTest.animate );
+		    _this._Animate.call(_this);
+		}
 	}
 	var showFps = function() {
 		if (_this._F - _this._lastF < 10) return;

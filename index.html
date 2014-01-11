@@ -7,9 +7,10 @@
 
 
 	<!-- application stylesheet should come in after the one loaded by the framework -->
+	<script src="pixi.js" type="text/javascript" charset="utf-8"></script>
 	<script src="balls/ball.js" type="text/javascript" charset="utf-8"></script>
-	<script src="balls/dhtml.ball.js" type="text/javascript" charset="utf-8"> </script>	
-	
+	<script src="balls/pixi.ball.js" type="text/javascript" charset="utf-8"> </script>	
+
 	<link href="stylesheets/bubblemarkanimationtest.css" media="screen" rel="stylesheet" type="text/css" />
 	<script  type="text/javascript" charset="utf-8" >
 	<!-- 	
@@ -18,9 +19,15 @@
 			   example, key handlers that are observing the document */
 				height = document.getElementById("Host").clientHeight;
 				width = document.getElementById("Host").clientWidth;
-				_dhtmlTest = new DHTMLTest(8, 0,0,width,height);
-				_dhtmlTest.start(); 
-			
+				
+				// DHTML Hosting
+				//_dhtmlTest = new DHTMLTest(8, 0,0,width,height);
+				//_dhtmlTest.start(); 
+				
+				// WebGL/Canvas Pixi Hosting
+				_pixiTest = new PixiTest(8, 0,0,width,height);
+				_pixiTest.start(); 
+
 		}		
 	-->
 	</script>
@@ -29,6 +36,6 @@
 
 <body OnLoad="Activate()" >
 	<div id="Host" class="host" onclick="">
-			<div id="fps"></div>
+	<div id="fps"></div>
 </body>
 </html>
