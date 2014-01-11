@@ -43,7 +43,7 @@ var extend = function(subClass, baseClass)
  */
 function Ball(x, y, vx, vy) {
 	// default provisioning
-	if (x == undefined) {
+	if (x === undefined) {
 		x = (model.walls.right - model.walls.left - 2*model.ballRadius)*Math.random(); 
 		y = (model.walls.bottom - model.walls.top - 2*model.ballRadius)*Math.random(); 
 		vx = 2*model.maxSpeed*Math.random() - model.maxSpeed;
