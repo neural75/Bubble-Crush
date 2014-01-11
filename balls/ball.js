@@ -140,7 +140,7 @@ Ball.prototype.doCollide = function(b) {
  * @param {Object} N
  */
 function BallsTest(N, top, left, right, bottom) {
-    if (top != undefined)
+    if (top !== undefined)
 	{
 		model.walls.top = top;
 		model.walls.left = left;
@@ -163,7 +163,7 @@ BallsTest.prototype.start = function(N) {
 	if (this._isRunning) return false;
 	this._isRunning = true;
 	
-	if (N != undefined) {
+	if (N !== undefined) {
 		this._N = N;
 	}
 	
@@ -182,7 +182,7 @@ BallsTest.prototype.start = function(N) {
 		}
 		// process collisions
 		for (i=0; i<_this._N; i++) {
-			for (j=i+1; j<_this._N; j++) {
+			for (var j=i+1; j<_this._N; j++) {
 				_this._ballsO[i].doCollide(_this._ballsO[j]);
 			}
 		}
@@ -192,8 +192,7 @@ BallsTest.prototype.start = function(N) {
 		var currTime = new Date();
 		var delta_t = (currTime.getMinutes() - _this._lastTime.getMinutes())*60 + currTime.getSeconds() - _this._lastTime.getSeconds() + (currTime.getMilliseconds() - _this._lastTime.getMilliseconds())/1000.0;
 		
-		delete currTime; 
-		
+	
 		var fps = (_this._F - _this._lastF)/delta_t;
 		
 		_this._lastF = _this._F;
@@ -224,8 +223,9 @@ BallsTest.prototype.pause = function (){
 }
 
 BallsTest.prototype.resume = function (){
-	if (this._isRunning) return false;	
-	this._int1 = setInterval(moveBalls, 17);
+	if (this._isRunning)
+	    return false;	
+	this._int1 = setInterval(moveBalls, 1);
 	this._int2 = setInterval(showFps, 1000);
 	return true;	
 }
