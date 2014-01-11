@@ -229,8 +229,7 @@ BallsTest.prototype.pause = function (){
 }
 
 BallsTest.prototype.resume = function (){
-	if (this._isRunning)
-	    return false;	
+	if (this._isRunning) return false;	
 	this._int1 = setInterval(moveBalls, 1);
 	this._int2 = setInterval(showFps, 1000);
 	return true;	
