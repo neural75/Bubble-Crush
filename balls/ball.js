@@ -187,7 +187,7 @@ BallsTest.prototype.start = function(N) {
 			}
 		}
 		
-		if (_this._Animate != undefined)
+		if (_this._Animate !== undefined)
 		{
 		    //requestAnimFrame( _this._pixiTest.animate );
 		    _this._Animate.call(_this);
