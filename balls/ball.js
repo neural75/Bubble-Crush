@@ -211,8 +211,8 @@ BallsTest.prototype.start = function(N) {
 			_this._showFPS.call(_this, Math.round(fps));
 	}
 
-	//this._int1 = setInterval(moveBalls, 17);
-	//this._int2 = setInterval(showFps, 1000);
+	this._int1 = setInterval(moveBalls, 16);
+	this._int2 = setInterval(showFps, 1000);
 	return true;
 }
 BallsTest.prototype.stop = function(){
