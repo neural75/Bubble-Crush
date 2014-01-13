@@ -77,10 +77,37 @@ function PixiTest(N , top, left, right, bottom) {
 }
 extend(PixiTest, BallsTest);
 
-PixiTest.prototype._Animate = function(_this) {
+PixiTest.prototype._requestAnimFrame = function() {
+    var _this = this;
+    requestAnimFrame( function() {
+
+    	var moveBalls = function() {
+    		if (_this._N > _this._ballsO.length) 
+    			return;
+    		_this._F++;
+    		// move balls
+    		for (var i=0; i<_this._N; i++) {
+    			_this._ballsO[i].move();
+    		}
+    		// process collisions
+    		for (i=0; i<_this._N; i++) {
+    			for (var j=i+1; j<_this._N; j++) {
+    				_this._ballsO[i].doCollide(_this._ballsO[j]);
+    			}
+    		}
+    		
+    	}
+    	moveBalls();
+    	_this._Animate();
+        
+    } );
+
+}
+
+PixiTest.prototype._Animate = function() {
  
-        //requestAnimFrame( this.animate );
- 
+        this._requestAnimFrame( );
+
         // render the stage   
         this._renderer.render(this._stage);
 }
@@ -95,7 +122,7 @@ PixiTest.prototype.start = function(N) {
                 this._ballsO[i] = new PixiBall(i, this); // this._ballsO[0].clone("dhtml_ball_" + i);
         }
         
-        //requestAnimFrame( this._Animate );
+        this._requestAnimFrame();
         
 }
 PixiTest.prototype.stop = function(){

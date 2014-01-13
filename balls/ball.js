@@ -187,16 +187,19 @@ BallsTest.prototype.start = function(N) {
 			}
 		}
 		
+		/*
 		if (_this._Animate !== undefined)
 		{
 		    //requestAnimFrame( _this._pixiTest.animate );
 		    _this._Animate.call(_this);
-		}
+		}*/
 	}
 	var showFps = function() {
 		if (_this._F - _this._lastF < 10) return;
 		var currTime = new Date();
-		var delta_t = (currTime.getMinutes() - _this._lastTime.getMinutes())*60 + currTime.getSeconds() - _this._lastTime.getSeconds() + (currTime.getMilliseconds() - _this._lastTime.getMilliseconds())/1000.0;
+		var delta_t = (  currTime.getMinutes() - _this._lastTime.getMinutes())* 60 
+		               + currTime.getSeconds() - _this._lastTime.getSeconds() + 
+		                (currTime.getMilliseconds() - _this._lastTime.getMilliseconds())/1000.0;
 		
 	
 		var fps = (_this._F - _this._lastF)/delta_t;
@@ -208,8 +211,8 @@ BallsTest.prototype.start = function(N) {
 			_this._showFPS.call(_this, Math.round(fps));
 	}
 
-	this._int1 = setInterval(moveBalls, 17);
-	this._int2 = setInterval(showFps, 1000);
+	//this._int1 = setInterval(moveBalls, 17);
+	//this._int2 = setInterval(showFps, 1000);
 	return true;
 }
 BallsTest.prototype.stop = function(){
